@@ -1,7 +1,9 @@
-const second = () => {
+import getData from "./getData";
+
+const second = async () => {
     const cartBtn = document.getElementById("cart");
 
-    console.log("second");
+    console.log(await getData());
 };
 
 export default second;
