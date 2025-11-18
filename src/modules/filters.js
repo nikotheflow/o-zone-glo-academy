@@ -5,3 +5,7 @@ export const searchFilter = (goods, value) => goods
 export const categoryFilter = (goods, category) => goods
     .filter(goodsItem => goodsItem.category.toLowerCase().includes(category.toLowerCase())
 );
+
+export const priceFilter = (goods, min = 0, max = Infinity) => {
+    return goods.filter((goodsItem) => min <= Number(goodsItem.price) && Number(goodsItem.price) <= max);
+};
