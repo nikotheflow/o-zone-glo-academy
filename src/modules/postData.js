@@ -1,13 +1,7 @@
-const postData = async () => {
-    const response = await fetch("http://localhost:3000/goods", {
+const postData = async (goods) => {
+    const response = await fetch("https://jsonplaceholder.typicode.com/posts", {
         method: "POST",
-        body: JSON.stringify({
-            category: "Игры и софт",
-            img: "https://cdn1.ozone.ru/multimedia/c400/1023547851.jpg",
-            price: 3000,
-            sale: true,
-            title: "Игра Ведьмак 3",
-        }),
+        body: JSON.stringify(goods),
         headers: {
             "Content-type": "application-json; charset=UTF-8",
         },
